@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/search/search",
+    "pages/eval/eval",
+    "pages/user/user",
+    "pages/activity/discount/discount",
+    "pages/activity/list/list",
+    "pages/activity/tenGroup/tenGroup",
+    "pages/component/detail/detail",
+    "pages/component/group/group"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fb5d5d",
+    "navigationBarTitleText": "爱拼宝宝",
+    "navigationBarTextStyle":"#fff"
+  },
+  "tabBar": {
+    "selectedColor": "#f45580",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "爱拼宝宝",
+      "iconPath": "image/home.png",
+      "selectedIconPath": "image/home_active.png"
+    },
+    {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "image/user.png",
+      "selectedIconPath": "image/user_active.png"
+    }]
+  }
+}

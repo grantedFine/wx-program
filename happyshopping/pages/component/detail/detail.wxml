@@ -1,0 +1,81 @@
+
+<!--pages/component/detail/detail.wxml-->
+<swiper class='goods-img' indicator-dots>
+  <swiper-item wx:for="{{goods.imgUrls}}">
+    <image src="{{item}}" style="width:100%;height:750rpx;"></image>
+  </swiper-item>
+</swiper>
+
+<!--goods-detail-->
+<view class="goods-info">
+  <view class="goods-title">{{goods.title}}</view>
+  <view class="group">
+    {{goods.group}}人团 ￥{{goods.groupPrice}}
+    <view class="original">原价{{goods.oddPrice}}
+    </view>
+    <view class="post">快递：包邮</view>
+  </view>
+  <view class="otherAddress">
+    <text>新疆 西藏 青海 云南 贵州 海南 宁夏 甘肃 内蒙古 港澳台 海外地区商家不支持发货,请勿下单,我们会尽快争取让这些地区的朋友参与到拼购,谢谢支持:)</text>
+    <text>商品成团后在不缺货情况下72小时内发货;请确保收件人电话和地址填写无误以及手机畅通;</text>
+    <text>商家默认快递无法更改,请勿留言指定快递。</text>
+  </view>
+</view>
+<view class="group-play">
+  <view class="group-play-title">拼团玩法</view>
+  <view class="play-items">
+    <view class="play-item">
+    <view class="iconfont icon-purchase"></view>
+      <view>
+        <text>付款开团</text>
+        <text>或参团</text>
+      </view>
+    </view>
+    <view class="play-item">
+     <view class="iconfont icon-addfriend"></view>
+      <view>
+        <text>分享给好友</text>
+        <text>邀请参团</text>
+      </view>
+    </view>
+    <view class="play-item">
+     <view class="iconfont icon-duigou"></view>
+      <view>
+        <text>达到人数</text>
+        <text>顺利开团</text>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="tips">*开团并邀请好友参团，24小时内人数不足退款</view>
+<view class="group-list">
+  <view class="group-list-title">懒人凑团挤一挤</view>
+  <view class="group-list-item">
+    <view class="group-info">
+      <image class="group-leader-img" src="{{group[0].userImg}}" style="width:64rpx;height:64rpx;"></image>
+      <view class="group-detail">
+        <text>{{group[0].userName}}</text>
+        <text class="group-lack">剩余<text style="color:#f45580;">{{group[0].endTime}}</text>结束 仅差<text style="color:#f45580;">{{group[0].gap}}</text>人</text>
+      </view>
+    </view>
+    <view class="group-join">参团</view>
+  </view>
+</view>
+<view class="goods-des">
+<view class="goods-des-title">商品描述</view>
+<view class="goods-detail">
+{{goods.detailText}}
+</view>
+<image src="{{item}}" wx:for="{{goods.detailImg}}" style="width:100%;" mode="widthFix"></image>
+</view>
+<view style="height:100rpx;"></view>
+<view class="goods-pay">
+<view class="goods-pay-single">
+<text>单买</text>
+<text>￥{{goods.singlePrice}}</text>
+</view>
+<view class="goods-pay-group">
+<text>{{goods.group}}人开团</text>
+<text>￥{{goods.groupPrice}}</text>
+</view>
+</view>

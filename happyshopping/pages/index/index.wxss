@@ -1,0 +1,179 @@
+/**index.wxss**/
+
+.scroll {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 300rpx;
+}
+
+.home-hot {
+  position: relative;
+}
+
+.home-hot::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background: #ddd;
+}
+
+.hot-left {
+  display: inline-block;
+  position: relative;
+  width: 300rpx;
+  height: 340rpx;
+}
+
+.hot-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  border-right: 1rpx solid #ddd;
+}
+
+.hot-right {
+  display: inline-block;
+  width: 450rpx;
+}
+
+.hot-right-top {
+  display: inline-block;
+  position: relative;
+  width: 450rpx;
+  height: 140rpx;
+}
+
+.hot-right-top::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1rpx;
+  background: #ddd;
+}
+
+.hot-right-btm {
+  width: 450rpx;
+  height: 200rpx;
+}
+
+.hot-right-btm-left, .hot-right-btm-right {
+  display: inline-block;
+  position: relative;
+  width: 225rpx;
+  height: 200rpx;
+}
+
+.hot-right-btm-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 0;
+  border-right: 1rpx solid #ddd;
+}
+
+/*导航栏*/
+
+.fixed {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.tabs {
+  width: 100%;
+  height: 31px;
+  white-space: nowrap;
+  overflow-x: hidden;
+  box-shadow: 0px 1rpx #ddd;
+}
+
+.tab {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  width: 187rpx;
+  box-sizing: border-box;
+  font-size: 16px;
+  text-align: center;
+}
+
+.activetab {
+  color: #f45580;
+  font-weight: 600;
+  border-bottom: 5rpx solid #f45580;
+}
+
+/*商品信息*/
+
+.tabcontent {
+  padding-top: 10rpx;
+  background: #ddd;
+}
+
+.goods-item {
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+
+.goods-title {
+  padding-left: 30rpx;
+  font: 500 38rpx sans-serif;
+  color: #000;
+}
+
+.goods-info {
+  height: 50rpx;
+  padding-left: 30rpx;
+  padding-top: 11rpx;
+  width: 60%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font: 400 28rpx Arial, Helvetica, sans-serif;
+  color: #666;
+}
+
+.shopping-info {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15rpx 30rpx 30rpx 30rpx;
+}
+
+.goods-price {
+  font-size: 38rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  color: #f45580;
+}
+
+.goods-purchase {
+  float: right;
+  color: #f45580;
+  height: 38rpx;
+  padding: 10rpx;
+  border: 1px solid #f45580;
+  border-radius: 8rpx;
+}

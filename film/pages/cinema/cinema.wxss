@@ -1,0 +1,57 @@
+/* pages/cinema/cinema.wxss */
+
+.closed {
+    display: none;
+}
+
+.weui-panel {
+    margin-top: 0;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.weui-panel__hd {
+    position: relative;
+    color: #000;
+    font-size:18px;
+    font-weight:500;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.weui-panel__hd::after {
+    display: none;
+}
+
+.weui-panel::after,
+.weui-panel::before {
+    display: none
+}
+.weui-media__title{
+   font-size:16px;
+   color:#000; 
+}
+.weui-media__des{
+    font-size: 12px;
+    color:#171717;
+}
+.weui-search-bar__btn{
+    height: 28px;
+    width: 28px;
+    background: #1AAD19;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.arrow{
+    position: absolute;
+    top:16px;
+    right:8px;
+    height: 16px;
+    width:16px;
+    transform: rotate(-90deg)
+}
+.active{
+   transform: rotate(90deg) 
+}

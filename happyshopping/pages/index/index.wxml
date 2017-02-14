@@ -1,0 +1,52 @@
+
+<!--index.wxml-->
+<loading hidden="{{!loading}}">
+  加载中...
+</loading>
+<scroll-view class="scroll" scroll-y="true" bindscroll="scroll">
+  <swiper class="banner" indicator-dots autoplay interval="5000" duration="2000">
+    <swiper-item wx:for="{{banners}}" wx:key="{{item.banner_goodsId}}">
+      <navigator url="{{item.banner_url}}">
+        <image style="width:100%;height:300rpx" mode="aspectFit" src="{{item.banner_img}}"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <view class="home-hot">
+    <navigator class="hot-left" open-type="switchTab" url="../hot/hot">
+      <image style="width:100%;height:100%;" src="{{activityUrls[0]}}"></image>
+    </navigator>
+    <view class="hot-right">
+      <navigator class="hot-right-top" url="../activity/tenGroup/tenGroup">
+        <image style="width:100%;height:100%;" src="{{activityUrls[1]}}"></image>
+      </navigator>
+      <view class="hot-right-btm">
+        <navigator class="hot-right-btm-left" url="../activity/discount/discount">
+          <image style="width:100%;height:100%;" src="{{activityUrls[2]}}"></image>
+        </navigator>
+        <navigator class="hot-right-btm-right" url="../activity/list/list">
+          <image style="width:100%;height:100%;" src="{{activityUrls[3]}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="tabs {{active?'fixed':''}}" scroll-x="true">
+    <view class="tab {{activeId!==item.tabId?'':'activetab'}}" data-tabid="{{item.tabId}}" bindtap="taplink" wx:for="{{hometab}}" wx:key="{{item.tabId}}">{{item.tabName}}</view>
+  </scroll-view>
+  <view class="tabcontent">
+    <view class="goods-item" wx:for="{{goods}}" wx:key="{{item.goods_id}}">
+      <navigator url="../component/detail/detail">
+        <image src="{{item.goods_img}}" style="width:100%;height:750rpx;"></image>
+        <view class="goods-title">{{item.goods_title}}</view>
+        <view class="goods-info" wx:if="{{item.goods_promote_info}}">
+          <text>{{item.goods_promote_info}}</text>
+        </view>
+        <view class="shopping-info">
+          <view class="iconfont icon-people goods-purchase">{{item.goods_group_size}}人团</view>
+          <view class="goods-price">
+            ￥{{item.goods_group_price}}
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</scroll-view>

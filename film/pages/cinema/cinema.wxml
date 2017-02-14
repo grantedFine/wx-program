@@ -1,0 +1,19 @@
+<loading hidden="{{loading}}">
+  加载中...
+</loading>
+
+<scroll-view class="container" style="height: {{windowHeight}}px; width: {{windowWidth}}px; " scroll-y="true" bindscrolltoupper="pullDownRefresh" bindscrolltolower="pullUpLoad" lower-threshold="800">
+  <view wx:for="{{cinemas}}" wx:for-index="index" wx:key="{{index}}" class="weui-panel weui-panel_access">
+    <view class="weui-panel__hd" style="border:0;" data-index="{{index}}" bindtap="toggle">{{item.area}}({{item.data.length}}家)
+    <image class="arrow {{item.open?'':'active'}}" src="../../images/arrowright.png"></image>
+    </view>
+    <view class="weui-panel__bd {{item.open?'':'closed'}}">
+      <view class="weui-media-box" wx:for="{{item.data}}" wx:key="{{item.id}}">
+      <navigator url="../cinemaDetail/cinemaDetail?id={{item.id}}">
+       <view class="weui-media__title">{{item.nm}}</view>
+        <view class="weui-media__des">{{item.addr}}</view>
+      </navigator>
+      </view>
+    </view>
+  </view>
+</scroll-view>

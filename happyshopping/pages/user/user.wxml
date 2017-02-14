@@ -1,0 +1,42 @@
+
+<!--pages/user/user.wxml-->
+<view class="user-header">
+  <view class="user-img">
+    <view class="iconfont icon-wexin"></view>
+  </view>
+  <view class="wexin-login">微信授权登录</view>
+</view>
+
+<!--用户详情-->
+<view class="user-detail">
+  <navigator url="url">
+    <view class="user-order">
+      <text>全部订单</text>
+      <view class="order-look">查看
+        <image src="../../image/arrowright.png" style="width:26rpx;height:26rpx;"></image>
+      </view>
+    </view>
+  </navigator>
+  <view class="order-list">
+    <navigator url="url" class="order-item">
+      <view class="iconfont icon-people"></view>
+      <text class="order-item-text">待成团</text>
+    </navigator>
+    <navigator url="url" class="order-item">
+      <view class="iconfont icon-pay"></view>
+      <text class="order-item-text">待付款</text>
+    </navigator>
+    <navigator url="url" class="order-item">
+      <view class="iconfont icon-packing"></view>
+      <text class="order-item-text">待发货</text>
+    </navigator>
+    <navigator url="url" class="order-item">
+      <view class="iconfont icon-deliver"></view>
+      <text class="order-item-text">待收货</text>
+    </navigator>
+    <navigator url="url" class="order-item">
+      <view class="iconfont icon-complete"></view>
+      <text class="order-item-text">已完成</text>
+    </navigator>
+  </view>
+</view>
