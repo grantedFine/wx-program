@@ -9,7 +9,7 @@ Page({
     windowWidth: 0
   },
   onLoad: function (options) {
-    var id = 'http://m.maoyan.com/movie/' + options.id + '.json'
+    var id = 'https://m.maoyan.com/movie/' + options.id + '.json'
     this.setData({
       title: options.titles
     })

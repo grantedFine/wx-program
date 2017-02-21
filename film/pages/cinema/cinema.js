@@ -17,7 +17,7 @@ Page({
     getCinemas: function() {
         var that = this
         wx.request({
-            url: "http://m.maoyan.com/cinemas.json" ,
+            url: "https://m.maoyan.com/cinemas.json" ,
             type: "application/json",
             success: function(res) {
               if(res.data.error){

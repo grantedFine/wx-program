@@ -15,7 +15,7 @@ Page({
   onShow: function(){
     var that = this
     wx.request({
-      url: 'http://m.maoyan.com/movie/list.json', //仅为示例，并非真实的接口地址
+      url: 'https://m.maoyan.com/movie/list.json', //仅为示例，并非真实的接口地址
       data: {
         offset: 0,
         type: 'hot',

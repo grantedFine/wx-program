@@ -79,7 +79,7 @@ Page({
                 movies = res.data.data.movies.map(movie => {
                     const arr = movie.img.split('/')
                     const str = arr[arr.length - 1]
-                    movie.img = 'http://p0.meituan.net/165.220/movie/' + str
+                    movie.img = 'https://p0.meituan.net/165.220/movie/' + str
                     return movie
                 })
                 that.setData({
